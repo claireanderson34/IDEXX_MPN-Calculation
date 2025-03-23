@@ -11,8 +11,8 @@ IDEXXData <- paste0(FolderPath,"/Data/final datasheets")
 
 ##MPN Table for IDEXX
 MPNTable <- read_excel(paste0(FolderPath,"/Data/MPNTable.xlsx"))
-MPNTable[] <- lapply(MPNTable, function(x) gsub("[<1]", "0.5", x))
-MPNTable[] <- lapply(MPNTable, function(x) gsub("[>2419.6]", "2420", x))
+MPNTable[] <- lapply(MPNTable, function(x) gsub("<1", "0.5", x))
+MPNTable[] <- lapply(MPNTable, function(x) gsub(">2419.6", "2420", x))
 
 
 ###DATA SETUP------------------------------------------------------------------------
